@@ -22,7 +22,7 @@ try {
     dotenv.config({path: path.join(__dirname, "..", ENV_FILE_NAME)});
 } catch (e) {
 }
-
+console.log(process.env)
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
     process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
@@ -71,7 +71,7 @@ const projectConfig = {
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
     // Uncomment the following lines to enable REDIS
-    // redis_url: REDIS_URL
+    redis_url: REDIS_URL
 }
 
 if (DATABASE_URL && DATABASE_TYPE === "postgres") {
