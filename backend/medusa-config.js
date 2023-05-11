@@ -38,28 +38,28 @@ const plugins = [
     `medusa-fulfillment-manual`,
     `medusa-payment-manual`,
     // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
-    // {
-    //   resolve: "@medusajs/admin",
-    //   /** @type {import('@medusajs/admin').PluginOptions} */
-    //   options: {
-    //     autoRebuild: true,
-    //   },
-    // },
+    {
+      resolve: "@medusajs/admin",
+      /** @type {import('@medusajs/admin').PluginOptions} */
+      options: {
+        autoRebuild: true,
+      },
+    },
 ];
 
 const modules = {
-    /*eventBus: {
-      resolve: "@medusajs/event-bus-redis",
-      options: {
-        redisUrl: REDIS_URL
-      }
+    eventBus: {
+        resolve: "@medusajs/event-bus-redis",
+        options: {
+            redisUrl: REDIS_URL
+        }
     },
     cacheService: {
-      resolve: "@medusajs/cache-redis",
-      options: {
-        redisUrl: REDIS_URL
-      }
-    },*/
+        resolve: "@medusajs/cache-redis",
+        options: {
+            redisUrl: REDIS_URL
+        }
+    },
 }
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
