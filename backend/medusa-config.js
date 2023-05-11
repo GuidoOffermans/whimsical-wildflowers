@@ -75,7 +75,7 @@ const projectConfig = {
 }
 
 if (DATABASE_URL && DATABASE_TYPE === "postgres") {
-    projectConfig.database_url = DATABASE_URL;
+    projectConfig.database_url = DATABASE_URL + "?sslmode=require";
     delete projectConfig["database_database"];
 }
 
